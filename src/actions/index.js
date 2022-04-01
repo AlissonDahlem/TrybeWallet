@@ -3,4 +3,9 @@ const userEmailAction = (email) => ({
   email,
 });
 
+export const currenciesAction = (currencies) => ({
+  type: 'CURRENCIES',
+  currencies,
+});
+
 export default userEmailAction;
