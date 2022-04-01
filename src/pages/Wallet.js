@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import coinCurrencies from '../helpers/requestApi';
-import { currenciesAction } from '../actions'
+import { currenciesAction } from '../actions';
 
 class Wallet extends React.Component {
   constructor() {
