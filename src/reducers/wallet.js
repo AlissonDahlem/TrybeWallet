@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   currencies: [],
 };
 
-const user = (state = INITIAL_STATE, action) => {
+const wallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case CURRENCIES:
     return {
@@ -16,4 +16,4 @@ const user = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default user;
+export default wallet;
