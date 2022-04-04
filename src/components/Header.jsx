@@ -30,7 +30,7 @@ class Header extends React.Component {
       <>
         <h1 data-testid="email-field">{ email }</h1>
         <h2 data-testid="total-field">
-          { expensesSum }
+          { expensesSum > 0 ? expensesSum : '0' }
         </h2>
         <h2 data-testid="header-currency-field">BRL</h2>
       </>
