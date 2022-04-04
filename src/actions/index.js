@@ -12,3 +12,8 @@ export const spentListAction = (spent) => ({
   type: 'EXPENSES',
   spent,
 });
+
+export const expenseSumAction = (sum) => ({
+  type: 'EXPENSES_SUM',
+  sum,
+});
