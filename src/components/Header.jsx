@@ -15,8 +15,11 @@ class Header extends React.Component {
 
   async componentDidMount() {
     const requestApi = await coinCurrencies();
+    let filterKeys = [];
+    filterKeys = Object.keys(requestApi);
+    // console.log(requestApi);
     this.setState({
-      currencies: requestApi,
+      currencies: filterKeys,
     });
   }
 

@@ -4,10 +4,8 @@ const coinCurrencies = async () => {
   const data = await response.json();
 
   delete data.USDT;
-  let filterKeys = [];
-  filterKeys = Object.keys(data);
 
-  return filterKeys;
+  return data;
 };
 
 export default coinCurrencies;

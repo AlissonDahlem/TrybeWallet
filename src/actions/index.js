@@ -1,4 +1,4 @@
-const userEmailAction = (email) => ({
+export const userEmailAction = (email) => ({
   type: 'EMAIL',
   email,
 });
@@ -8,4 +8,7 @@ export const currenciesAction = (currencies) => ({
   currencies,
 });
 
-export default userEmailAction;
+export const spentListAction = (spent) => ({
+  type: 'EXPENSES',
+  spent,
+});
