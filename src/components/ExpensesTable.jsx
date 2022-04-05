@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import GenerateRowToTable from '../helpers/generateRowToTable';
 
 class ExpensesTable extends React.Component {
@@ -37,6 +38,10 @@ class ExpensesTable extends React.Component {
     );
   }
 }
+
+ExpensesTable.propTypes = {
+  expenses: PropTypes.arrayOf(Array).isRequired,
+};
 
 const mapStateToProps = (store) => ({
   expenses: store.wallet.expenses,

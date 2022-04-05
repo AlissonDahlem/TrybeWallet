@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class GenerateRowToTable extends React.Component {
   render() {
     const { description, tag, method, value, exchange, exchangeRates } = this.props;
     const exchangeName = exchangeRates[exchange].name;
-    const valueExchangeUsed = exchangeRates[exchange].ask
+    const valueExchangeUsed = exchangeRates[exchange].ask;
     const valueExchangeUserToNumber = parseFloat(valueExchangeUsed);
     const ValueExchangeUserFixed = valueExchangeUserToNumber.toFixed(2);
     const convertedValue = exchangeRates[exchange].ask * value;
@@ -25,5 +26,14 @@ class GenerateRowToTable extends React.Component {
     );
   }
 }
+
+GenerateRowToTable.propTypes = {
+  description: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  method: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  exchange: PropTypes.string.isRequired,
+  exchangeRates: PropTypes.shape({}).isRequired,
+};
 
 export default GenerateRowToTable;
