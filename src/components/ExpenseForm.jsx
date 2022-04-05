@@ -82,7 +82,7 @@ class FormExpenses extends React.Component {
             Valor:
             <input
               className="expenses-form"
-              type="text"
+              type="number"
               data-testid="value-input"
               id="value-input"
               value={ value }
